@@ -11,7 +11,6 @@
 =end
 puts 'Hello'
 
-
 # p002rubynumbers.rb
 =begin
  Ruby Numbers
@@ -31,7 +30,6 @@ puts 10 - 11
 puts 1.5 / 2.6
 # class hierarchy
 # http://www.cs.mun.ca/~donald/slug/2003-10-16/presentation/img5.html
-
 
 # p003rubystrings.rb
 =begin
@@ -54,7 +52,6 @@ puts 'Hello' * 3
 PI = 3.1416
 puts PI
 
-
 # p004stringusage.rb
 # Defining a constant
 PI = 3.1416
@@ -69,20 +66,20 @@ puts my_string
 var1 = 5;
 var2 = '2'
 puts var1 + var2.to_i
-# &lt;&lt; appending to a string
+# << appending to a string
 a = 'hello '
-a&lt;&lt;'world.
+a<<'world.
 I love this world...'
 puts a
 
 =begin
-  &lt;&lt; marks the start of the string literal and
+  << marks the start of the string literal and
   is followed by a delimiter of your choice.
   The string literal then starts from the next
   new line and finishes when the delimiter is
   repeated again on a line on its own.
 =end
-a = &lt;&lt;END_STR
+a = <<END_STR
 This is the string
 And a second line
 END_STR
@@ -102,14 +99,12 @@ puts "The city is " + city
 # to know which object you are in
 puts self
 
-
 # p006ftoc.rb
 puts 'Enter temperature in Fahrenheit: '
 STDOUT.flush
 temp_in_fahrenheit = gets.chomp
 temp_in_celsius = (((temp_in_fahrenheit.to_f - 32.0) / 9.0) * 5.0)
 puts 'Temperature ' + temp_in_fahrenheit + ' degree Fahrenheit = ' + format("%.2f", temp_in_celsius) + ' degree Celsius'
-
 
 # p007dt.rb
 =begin
@@ -156,7 +151,6 @@ def hello2 name2
 end
 puts(hello2 'talim')
 
-
 # p009mymethods1.rb
 # interpolation refers to the process of inserting the result of an
 # expression into a string literal
@@ -166,7 +160,6 @@ def mtd(arg1="Dibya", arg2="Shashank", arg3="Shashank")
 end
 puts mtd
 puts mtd("ruby")
-
 
 # p010aliasmtd.rb
 # alias new_name old_name
@@ -183,7 +176,6 @@ end
 puts oldmtd
 puts newmtd
 
-
 # p011vararg.rb
 # variable number of parameters example
 # The asterisk is actually taking all arguments you send to the method
@@ -194,14 +186,12 @@ end
 puts foo('hello','world')
 puts foo()
 
-
 # p012mtdstack.rb
 # Sequence in which the parameters are put on to the stack is left to right
 def mtd(a=99, b=a+1)
   [a,b]
 end
 puts mtd
-
 
 # p012zmm.rb
 class Dummy
@@ -210,7 +200,6 @@ class Dummy
   end
 end
 Dummy.new.anything
-
 
 # p013expint.rb
 def say_goodnight(name)
@@ -224,7 +213,6 @@ def say_goodnight2(name)
   "Good night, #{name}"
 end
 puts say_goodnight2('Talim')
-
 
 # p013strcmp.rb
 # String#eql?, tests two strings for identical content. It returns the same result as ==
@@ -253,13 +241,12 @@ else
   puts 'Two Strings are not identical objects'
 end
 
-
 # p014constructs.rb
 # In Ruby, nil and false evaluate to false, everything else (including true, 0) means true
 # nil is an actual object
 # if else end
 var = 5
-if var &gt; 4
+if var > 4
   puts "Variable is greater than 4"
   puts "I can have multiple statements here"
   if var == 5
@@ -274,11 +261,10 @@ end
 
 # Loops
 var = 0
-while var &lt; 10
+while var < 10
   puts var.to_s
   var += 1
 end
-
 
 # p015elsifex.rb
 # elseif example
@@ -320,7 +306,6 @@ if name == 'Satish' || name == 'Sunil'
   puts 'What a nice name!!'
 end
 
-
 # p016leapyear.rb
 =begin
 Program to determine if a year is a leap year.
@@ -339,16 +324,15 @@ The above logic is combined into a single if check below
 puts "Enter the year: "
 STDOUT.flush
 input_year = gets.chomp.to_i
-if ((input_year % 4 == 0) &amp;&amp; (input_year % 100 &gt; 0)) || (input_year % 400 == 0)
+if ((input_year % 4 == 0) && (input_year % 100 > 0)) || (input_year % 400 == 0)
   puts "Year #{input_year} is a leap year"
 else
   puts "Year #{input_year} is not a leap year"
 end
 
-
 # p017leapyearmtd.rb
 def leap_year?(input_year)
-  ((input_year % 4 == 0)  &amp;&amp; (input_year % 100 &gt; 0)) || (input_year % 400 == 0)
+  ((input_year % 4 == 0)  && (input_year % 100 > 0)) || (input_year % 400 == 0)
 end
 
 # Get the input and determine if it is a leap year
@@ -360,7 +344,6 @@ if leap_year?(input_year)
 else
   puts "Year #{input_year} is not a leap year and has #{365*60*24} minutes in the year"
 end
-
 
 # p018arrays.rb
 # Arrays
@@ -428,7 +411,6 @@ languages.each do |lang|
   puts 'Don\'t you?'
 end
 
-
 # p019mtdarry.rb
 # if you give return multiple parameters,
 # the method returns them in an array
@@ -447,16 +429,15 @@ num, square = mtdarry
 puts num
 puts square
 
-
-
 # p020arraysum.rb
 # Write a Ruby program that, when given an array
 # as collection = [1, 2, 3, 4, 5] it calculates the sum of its elements
 collection = [1, 2, 3, 4, 5]
 sum = 0
 collection.each {|i| sum += i}
-puts sum</code></pre>
-            <pre><code># p021oddeven.rb
+puts sum
+
+# p021oddeven.rb
 # given an array as collection = [12, 23, 456, 123, 4579] it
 # displays for each number, whether it is odd or even
 collection = [12, 23, 456, 123, 4579]
@@ -467,7 +448,6 @@ collection.each do |i|
     puts "#{i} is odd"
   end
 end
-
 
 # p021ranges.rb
 =begin
@@ -481,14 +461,14 @@ digits = -1..9
 puts digits.include?(5)        # true
 puts digits.min                  # -1
 puts digits.max                  # 9
-puts digits.reject {|i| i &lt; 5 }  # [5, 6, 7, 8, 9]</code></pre>
-            <pre><code># p021rangesex.rb
+puts digits.reject {|i| i < 5 }  # [5, 6, 7, 8, 9]
+
+# p021rangesex.rb
 s = 'key=value'
 i = s.index('=')
 # If range supplied to a string, as below, a new String is created
 puts s[0...i]
 puts s[i+1,s.length]
-
 
 # p022codeblock.rb
 =begin
@@ -505,7 +485,6 @@ end
 # Code blocks may appear only in the source adjacent to a method call
 call_block {puts 'In the block'}
 
-
 # p023codeblock2.rb
 # You can provide parameters to the call to yield:
 # these will be passed to the block
@@ -513,8 +492,6 @@ def call_block
   yield('hello', 99)
 end
 call_block {|str, num| puts str + ' ' + num.to_s}
-
-
 
 # p024proccall.rb
 # Blocks are not objects
@@ -528,7 +505,6 @@ toast = lambda do
   puts 'Cheers'
 end
 toast.call
-
 
 # p025mtdproc.rb
 =begin
@@ -547,7 +523,6 @@ say = lambda do
 end
 
 some_mtd say
-
 
 # p026phrase.rb
 =begin
@@ -578,7 +553,6 @@ phrase = word_list_one[rand1] + " " + word_list_two[rand2] + " " + word_list_thr
 
 puts phrase
 
-
 # p026zdeafgm1.rb
 =begin
   Write a Deaf Grandma program. Whatever you say to grandma
@@ -601,7 +575,6 @@ until (response = gets.chomp).eql?('BYE')
   puts 'Enter your response: '
   STDOUT.flush
 end
-
 
 # p026zdeafgm2.rb
 =begin
@@ -626,7 +599,6 @@ until (response = gets.chomp).eql?('BYE BYE BYE')
   STDOUT.flush
 end
 
-
 # p027readwrite.rb
 # Open and read from a text file
 # Note that since a block is given, file will automatically be closed when the block terminates
@@ -641,7 +613,6 @@ File.open('test.rb', 'w') do |f2|
   # use "" for two lines of text
   f2.puts "Created by Satish\nThank God!"
 end
-
 
 # p028swapcontents.rb - Program to swap the contents of 2 text files
 # Asuumptions: The two files exist in the same folder as the program
@@ -665,7 +636,6 @@ filereadwrite("file1.tmp", "file2")
 
 File.delete('file1.tmp')
 
-
 # p028xrandom.rb
 # We now need to display the contents of the file from the word USA
 f = File.new("hellousa.rb")
@@ -677,8 +647,9 @@ f = File.new("hellousa.rb")
 # :: is the scope operator - more on this later
 f.seek(12, IO::SEEK_SET)
 print f.readline
-f.close</code></pre>
-            <pre><code># p029dog.rb
+f.close
+
+# p029dog.rb
 # define class Dog
 class Dog
   def initialize(breed, name)
@@ -760,7 +731,6 @@ d1 = nil
   it's forever marked.
 =end
 
-
 # p030motorcycle.rb
 class MotorCycle
   def initialize(make, color)
@@ -777,7 +747,6 @@ class MotorCycle
     end
   end
 end
-
 
 # p031motorcycletest.rb
 require_relative 'p030motorcycle'
@@ -796,7 +765,6 @@ puts self.class
 puts self
 puts MotorCycle.instance_methods(false).sort
 
-
 # p031xdognext.rb
 require 'p029dog'
 # define class Dog
@@ -811,7 +779,6 @@ d.bark
 d.big_bark
 d.display
 
-
 # p032mystring.rb
 class String
   def writesize
@@ -821,7 +788,6 @@ end
 size_writer = "Tell me my size!"
 size_writer.writesize
 
-
 # p033mammal.rb
 class Mammal
   def breathe
@@ -829,7 +795,7 @@ class Mammal
   end
 end
 
-class Cat&lt;Mammal
+class Cat<Mammal
   def speak
     puts "Meow"
   end
@@ -838,7 +804,6 @@ end
 rani = Cat.new
 rani.breathe
 rani.speak
-
 
 # p034bird.rb
 class Bird
@@ -850,7 +815,7 @@ class Bird
   end
 end
 
-class Penguin&lt;Bird
+class Penguin<Bird
   def fly
     puts "Sorry. I'd rather swim."
   end
@@ -859,7 +824,6 @@ end
 p = Penguin.new
 p.preen
 p.fly
-
 
 # p035inherit.rb
 class GF
@@ -874,7 +838,7 @@ class GF
 end
 
 # class F sub-class of GF
-class F &lt; GF
+class F < GF
   def initialize
     super
     puts 'In F class'
@@ -882,7 +846,7 @@ class F &lt; GF
 end
 
 # class S sub-class of F
-class S &lt; F
+class S < F
  def initialize
    super
    puts @m
@@ -892,7 +856,6 @@ class S &lt; F
 end
 son = S.new
 son.gfmethod
-
 
 # p036duck.rb
 class Duck
@@ -936,7 +899,6 @@ end
 puts make_it_swim(Duck.new)
 puts make_it_swim(Goose.new)
 
-
 # p037rectangle.rb
 # The Rectangle constructor accepts arguments in either
 # of the following forms:
@@ -944,7 +906,7 @@ puts make_it_swim(Goose.new)
 #   Rectangle.new([x_top, y_left], [x_bottom, y_right])
 class Rectangle
   def initialize(*args)
-    if args.size &lt; 2  || args.size &gt; 3
+    if args.size < 2  || args.size > 3
       # modify this to raise exception, later
       puts 'This method takes either 2 or 3 arguments'
     else
@@ -958,7 +920,6 @@ class Rectangle
 end
 Rectangle.new([10, 23], 4, 10)
 Rectangle.new([10, 23], [14, 13])
-
 
 # p037xmtdovride.rb
 class A
@@ -975,7 +936,6 @@ end
 
 b = B.new
 b.a
-
 
 # p038bicycle.rb
 class Bicycle
@@ -1002,8 +962,6 @@ puts b.gears
 puts b.wheels
 puts b.seats
 
-
-
 # p038or.rb
 class OR
   def mtd
@@ -1015,13 +973,11 @@ class OR
 end
 OR.new.mtd
 
-
 # p039symbol.rb
 puts "string".object_id
 puts "string".object_id
 puts :symbol.object_id
 puts :symbol.object_id
-
 
 # p039xsymbol.rb
 class Test
@@ -1035,7 +991,6 @@ end
 t = Test.new
 t.test
 
-
 # p039xyzsymbol.rb
 know_ruby = 'yes'
 if know_ruby == 'yes'
@@ -1044,14 +999,12 @@ else
   puts 'Start learning Ruby'
 end
 
-
 # p040myhash.rb
-h = {'dog' =&gt; 'canine', 'cat' =&gt; 'feline', 'donkey' =&gt; 'asinine', 12 =&gt; 'dodecine'}
+h = {'dog' => 'canine', 'cat' => 'feline', 'donkey' => 'asinine', 12 => 'dodecine'}
 puts h.length  # 3
 puts h['dog']   # 'canine'
 puts h
 puts h[12]
-
 
 # p041symbolhash.rb
 people = Hash.new
@@ -1060,7 +1013,6 @@ people[:language] = 'Marathi'
 people[:lastname] = 'Talim'
 
 puts people[:lastname] # Talim
-
 
 # p042time.rb
 t = Time.now
@@ -1081,7 +1033,6 @@ puts t.strftime("%b")
 # 24 hour clock and Time zone name
 puts t.strftime("at %H:%M %Z")
 
-
 # p043raise.rb
 def raise_exception
   puts 'I am before the raise.'
@@ -1090,8 +1041,7 @@ def raise_exception
 end
 raise_exception
 
-</code></pre>
-            <pre><code># p044inverse.rb
+# p044inverse.rb
 def inverse(x)
     raise ArgumentError, 'Argument is not numeric' unless x.is_a? Numeric
     1.0 / x
@@ -1099,8 +1049,7 @@ end
 puts inverse(2)
 puts inverse('not a number')
 
-</code></pre>
-            <pre><code># p045handexcp.rb
+# p045handexcp.rb
 def raise_and_rescue
   begin
     puts 'I am before the raise.'
@@ -1113,17 +1062,15 @@ def raise_and_rescue
 end
 raise_and_rescue
 
-</code></pre>
-            <pre><code># p046excpvar.rb
+# p046excpvar.rb
 begin
   raise 'A test exception.'
-rescue Exception =&gt; e
+rescue Exception => e
   puts e.message
     puts e.backtrace.inspect
 end
 
-</code></pre>
-            <pre><code># p046xreadwrite.rb
+# p046xreadwrite.rb
 # Open and read from a text file
 # Note that since a block is given, file will automatically be closed when the block terminates
 begin
@@ -1138,13 +1085,12 @@ begin
     # use "" for two lines of text
     f2.puts "Created by Satish\nThank God!"
   end
-rescue Exception =&gt; msg
+rescue Exception => msg
   # display the system generated error message
   puts msg.message
 end
 
-</code></pre>
-            <pre><code># p047classaccess.rb
+# p047classaccess.rb
 class ClassAccess
   def m1      # this method is public
   end
@@ -1160,8 +1106,7 @@ ca.m1
 #ca.m2
 #ca.m3
 
-</code></pre>
-            <pre><code># p047zclassaccess.rb
+# p047zclassaccess.rb
 class Person
   def initialize(age)
     @age = age
@@ -1170,7 +1115,7 @@ class Person
     @age
   end
   def compare_age(c)
-    if c.age &gt; age
+    if c.age > age
       "The other object's age is bigger."
     else
       "The other object's age is the same or smaller."
@@ -1184,8 +1129,7 @@ marcos = Person.new(34)
 puts chris.compare_age(marcos)
 #puts chris.age
 
-</code></pre>
-            <pre><code># p048accessor.rb
+# p048accessor.rb
 # First without accessor methods
 class Song
   def initialize(name, artist)
@@ -1222,8 +1166,7 @@ song = Song.new("Brazil", "Ivete Sangalo")
 puts song.name
 puts song.artist
 
-</code></pre>
-            <pre><code># p049instvarinherit.rb
+# p049instvarinherit.rb
 class C
   def initialize
     @n = 100
@@ -1234,7 +1177,7 @@ class C
   end
 end
 
-class D &lt; C
+class D < C
   def show_n
     puts "n is #{@n}"
   end
@@ -1244,8 +1187,7 @@ d = D.new
 d.increase_n
 d.show_n
 
-</code></pre>
-            <pre><code># p050newdog.rb
+# p050newdog.rb
 class NewDog
   def initialize(breed)
     @breed = breed
@@ -1263,19 +1205,17 @@ nd = NewDog.new('Doberman')
 nd.name = 'Benzy'
 puts nd.name
 
-</code></pre>
-            <pre><code># p050xfreeze.rb
+# p050xfreeze.rb
 str = 'A simple string. '
 str.freeze
 begin
-  str &lt;&lt; 'An attempt to modify.'
-rescue =&gt; err
+  str << 'An attempt to modify.'
+rescue => err
   puts "#{err.class} #{err}"
 end
 # The output is - TypeError can't modify frozen string
 
-</code></pre>
-            <pre><code># p051gamecharacters.rb
+# p051gamecharacters.rb
 class GameCharacter
   def initialize(power, type, weapons)
     @power = power
@@ -1285,8 +1225,7 @@ class GameCharacter
   attr_reader :power, :type, :weapons
 end
 
-</code></pre>
-            <pre><code># p052dumpgc.rb
+# p052dumpgc.rb
 require 'p051gamecharacters'
 gc = GameCharacter.new(120, 'Magician', ['spells', 'invisibility'])
 puts gc.power.to_s + ' ' + gc.type + ' '
@@ -1298,8 +1237,7 @@ File.open('game', 'w+') do |f|
   Marshal.dump(gc, f)
 end
 
-</code></pre>
-            <pre><code># p053loadgc.rb
+# p053loadgc.rb
 require 'p051gamecharacters'
 File.open('game') do |f|
   @gc = Marshal.load(f)
@@ -1310,21 +1248,18 @@ puts @gc.power.to_s + ' ' + @gc.type + ' '
   puts w + ' '
 end
 
-</code></pre>
-            <pre><code># p054constwarn.rb
+# p054constwarn.rb
 A_CONST = 10
 A_CONST = 20
 
-</code></pre>
-            <pre><code># p055constalter.rb
+# p055constalter.rb
 A_CONST = "Doshi"
 B_CONST = A_CONST
 A_CONST[0] = "J" # alter string referenced by constant
 puts A_CONST # displays Joshi
 puts B_CONST
 
-</code></pre>
-            <pre><code># p056const.rb
+# p056const.rb
 OUTER_CONST = 99
 
 class Const
@@ -1339,8 +1274,7 @@ puts Const::CONST
 puts ::OUTER_CONST
 puts Const::NEW_CONST = 123
 
-</code></pre>
-            <pre><code># p057mymethods2.rb
+# p057mymethods2.rb
 # variables and methods start lowercase
 $glob = 5             # global variables start with $
 class TestVar         # class name constant, start uppercase
@@ -1375,8 +1309,7 @@ other = TestVar.new(17)
 puts other.inspect
 puts TestVar.cla
 
-</code></pre>
-            <pre><code># p058mytrig.rb
+# p058mytrig.rb
 module Trig
   PI = 3.1416
   # class methods
@@ -1388,8 +1321,7 @@ module Trig
   end
 end
 
-</code></pre>
-            <pre><code># p059mymoral.rb
+# p059mymoral.rb
 module Moral
   VERY_BAD = 0
   BAD         = 1
@@ -1398,15 +1330,13 @@ module Moral
   end
 end
 
-</code></pre>
-            <pre><code># p060usemodule.rb
+# p060usemodule.rb
 require 'p058mytrig'
 require 'p059mymoral'
 Trig.sin(Trig::PI/4)
 Moral.sin(Moral::VERY_BAD)
 
-</code></pre>
-            <pre><code># p061mixins.rb
+# p061mixins.rb
 module D
   def initialize(name)
     @name =name
@@ -1443,8 +1373,7 @@ et = EightTrack.new("Real Pillow")
 puts ph.who_am_i?
 puts et.who_am_i?
 
-</code></pre>
-            <pre><code>#  p062stuff.rb
+#  p062stuff.rb
 #  A module may contain constants, methods and classes.
 #  No instances
 
@@ -1466,8 +1395,7 @@ x = Stuff::T.new
 # uninitialized constant error, if you try the following
 # puts C
 
-</code></pre>
-            <pre><code># p063stuffusage.rb
+# p063stuffusage.rb
 require 'p062stuff'     # loads Stuff module from Stuff.rb
                     # $: is a system variable -- contains the path for loads
 class D
@@ -1478,12 +1406,11 @@ end
 d = D.new
 puts d.p(5)         # method p from Stuff
 puts $:             # array of folders to search for load
-$: &lt;&lt; "c:/"         # add a folder to the load path
+$: << "c:/"         # add a folder to the load path
 puts $:
 puts Stuff.m(5)     # Stuff class methods not called from D object
 
-</code></pre>
-            <pre><code># p063xself1.rb
+# p063xself1.rb
 class S
   puts 'Just started class S'
   puts self
@@ -1495,8 +1422,7 @@ class S
   puts self
 end
 
-</code></pre>
-            <pre><code># p063xself2.rb
+# p063xself2.rb
 class S
   def m
     puts 'Class S method m:'
@@ -1506,8 +1432,7 @@ end
 s = S.new
 s.m
 
-</code></pre>
-            <pre><code># p063xself3.rb
+# p063xself3.rb
 obj = Object.new
 def obj.show
   print 'I am an object: '
@@ -1519,8 +1444,7 @@ print 'And inspecting obj from outside, '
 puts "to be sure it's the same object:"
 puts obj
 
-</code></pre>
-            <pre><code># p063xself4.rb
+# p063xself4.rb
 class S
   def S.x
     puts "Class method of class S"
@@ -1529,8 +1453,7 @@ class S
 end
 S.x
 
-</code></pre>
-            <pre><code># p064regexp.rb
+# p064regexp.rb
 string = "My phone number is (123) 555-1234."
 phone_re = /\((\d{3})\)\s+(\d{3})-(\d{4})/
 m = phone_re.match(string)
@@ -1550,21 +1473,19 @@ puts "Here's another way to get at the first capture:"
 print "Capture #1: "
 puts m[1]
 
-</code></pre>
-            <pre><code># p065my_first_test.rb
+# p065my_first_test.rb
 require 'test/unit'
 
-class MyFirstTest &lt; Test::Unit::TestCase
+class MyFirstTest < Test::Unit::TestCase
   def test_for_truth
     assert true
   end
 end 
 
-</code></pre>
-            <pre><code># p066testradius.rb
+# p066testradius.rb
 require 'test/unit'
 require 'p067radius'
-class TestRadius &lt; Test::Unit::TestCase
+class TestRadius < Test::Unit::TestCase
 =begin
   def test_key
     robj = Radius.new('78')
@@ -1589,8 +1510,7 @@ end
   end
 end
 
-</code></pre>
-            <pre><code># p067radius.rb
+# p067radius.rb
 class Radius
   attr_reader :key
   def initialize(key)
@@ -1604,8 +1524,7 @@ class Radius
   end
 end
 
-</code></pre>
-            <pre><code># p068dtserver.rb
+# p068dtserver.rb
 # Date Time Server - server side using thread
 # usage: ruby p068dtserver.rb
 
@@ -1621,8 +1540,7 @@ loop do
   end
 end
 
-</code></pre>
-            <pre><code># p069dtclient.rb
+# p069dtclient.rb
 require 'socket'
 
 streamSock = TCPSocket.new( "127.0.0.1", 20000 )
@@ -1631,8 +1549,7 @@ str = streamSock.recv( 100 )
 print str
 streamSock.close
 
-</code></pre>
-            <pre><code># p070rubysmtp.rb
+# p070rubysmtp.rb
 require 'net/smtp'
 user_from = "superman@world.com"
 user_to = "batman@world.com"
@@ -1642,12 +1559,11 @@ begin
   Net::SMTP.start('localhost', 25) do |smtpclient|
     smtpclient.send_message(the_email, user_from, user_to)
   end
-rescue Exception =&gt; e
+rescue Exception => e
   print "Exception occured: " + e
 end
 
-</code></pre>
-            <pre><code># p070thread1.rb
+# p070thread1.rb
 puts Thread.main
 puts ""
 t1 = Thread.new {sleep 100}
@@ -1672,18 +1588,16 @@ Thread.list.each {|thr| p thr }
 # now exit the main thread (killing any others)
 Thread.exit
 
-</code></pre>
-            <pre><code># p070thread.rb
+# p070thread.rb
 x = Thread.new { sleep 0.1; print "x"; print "y"; print "z" }
 a = Thread.new { print "a"; print "b"; sleep 0.2; print "c" }
 x.join # Let the threads finish before
 a.join # main thread exits...
 
-</code></pre>
-            <pre><code># p072soapserver.rb
+# p072soapserver.rb
 require 'logger'
 require 'soap/rpc/standaloneServer'
-class MyServer &lt; SOAP::RPC::StandaloneServer
+class MyServer < SOAP::RPC::StandaloneServer
   def initialize(* args)
     super
     add_method(self, 'sayhelloto', 'username')
@@ -1700,21 +1614,18 @@ server = MyServer.new('RubyLearningServer','urn:mySoapServer','localhost',12321)
 trap('INT') {server.shutdown}
 server.start
 
-</code></pre>
-            <pre><code># p073prclient.rb
+# p073prclient.rb
 require 'soap/rpc/driver'
 driver = SOAP::RPC::Driver.new('http://127.0.0.1:12321/', 'urn:mySoapServer')
 driver.add_method('sayhelloto', 'username')
 puts driver.sayhelloto('RubyLearning')
 
-</code></pre>
-            <pre><code># p074hellotk.rb
+# p074hellotk.rb
 require 'tk'
 hello = TkRoot.new {title "Hello World"}
 Tk.mainloop
 
-</code></pre>
-            <pre><code># p075hellotk1.rb
+# p075hellotk1.rb
 require 'tk'
 hello = TkRoot.new do
   title "Hello World"
@@ -1727,37 +1638,38 @@ TkLabel.new(hello) do
   pack { padx 15; pady 15; side 'left'}
 end
 Tk.mainloop
-</code></pre>
-            <pre><code># p076hellotk2.rb
+
+# p076hellotk2.rb
 require 'tk'
 TkButton.new do
   text "EXIT"
   command { exit }
-  pack('side'=&gt;'left', 'padx'=&gt;10, 'pady'=&gt;10)
+  pack('side'=>'left', 'padx'=>10, 'pady'=>10)
 end
-Tk.mainloop</code></pre>
-            <pre><code># p077soapguiclient.rb
+Tk.mainloop
+
+# p077soapguiclient.rb
 require 'soap/rpc/driver'
 require 'tk'
 
 class SOAPGuiClient
   def connect
-    @buttonconnect.configure('text' =&gt; 'Reset')
+    @buttonconnect.configure('text' => 'Reset')
     @buttonconnect.command { reset }
     begin
       driver = SOAP::RPC::Driver.new('http://217.160.200.122:12321/', 'urn:mySoapServer')
       driver.add_method('sayhelloto', 'username')
       s = driver.sayhelloto('Satish Talim')
-    rescue Exception =&gt; e
+    rescue Exception => e
       s =  "Exception occured: " + e
     ensure
-      @label.configure('text' =&gt; s)
+      @label.configure('text' => s)
     end
   end #connect
 
   def reset
-    @label.configure('text' =&gt; "")
-    @buttonconnect.configure('text' =&gt; 'Connect')
+    @label.configure('text' => "")
+    @buttonconnect.configure('text' => 'Connect')
     @buttonconnect.command { connect }
   end # reset
 
@@ -1774,9 +1686,9 @@ class SOAPGuiClient
     end
 #---
     @buttonconnect = TkButton.new(root)
-    @buttonconnect.configure('text' =&gt; 'Connect')
+    @buttonconnect.configure('text' => 'Connect')
     @buttonconnect.command { connect }
-    @buttonconnect.pack('side'=&gt;'bottom')
+    @buttonconnect.pack('side'=>'bottom')
 #---
     Tk.mainloop
   end #initialize
@@ -1784,8 +1696,8 @@ end # class
 
 SOAPGuiClient.new
 #---
-</code></pre>
-            <pre><code># p078rubymysql.rb
+
+# p078rubymysql.rb
 require 'mysql'
 
 #my = Mysql.new(hostname, username, password, databasename)
@@ -1793,8 +1705,8 @@ con = Mysql.new('localhost', 'root', '', 'ruby')
 rs = con.query('select * from student')
 rs.each_hash { |h| puts h['name']}
 con.close
-</code></pre>
-            <pre><code># p079rubyquirk1.rb
+
+# p079rubyquirk1.rb
 class MotorCycle
   def initialize(make, color)
     @make, @color = make, color
@@ -1804,27 +1716,29 @@ end
 m = MotorCycle.new('Honda', 'blue')
 m.instance_variable_set(:@make, 'Kawasaki')
 m.instance_variable_set(:@gears, 4)
-puts m.inspect</code></pre>
-            <pre><code># p080dbconnect.rb
+puts m.inspect
+
+# p080dbconnect.rb
 require 'rubygems'
 require 'active_record'
 ActiveRecord::Base.establish_connection(
-:adapter=&gt; "mysql",
-:host =&gt; "localhost",
-:database=&gt; "students"
+:adapter=> "mysql",
+:host => "localhost",
+:database=> "students"
 )
 
-class Rubyist &lt; ActiveRecord::Base
+class Rubyist < ActiveRecord::Base
 end
 
-Rubyist.create(:name =&gt; 'Mitali Talim', :city =&gt; "Nashville, Tenessee")
-Rubyist.create(:name =&gt; 'Sunil Kelkar', :city =&gt; "Pune, India")
-Rubyist.create(:name =&gt; 'Adam Smith', :city =&gt; "San Fransisco, USA")
+Rubyist.create(:name => 'Mitali Talim', :city => "Nashville, Tenessee")
+Rubyist.create(:name => 'Sunil Kelkar', :city => "Pune, India")
+Rubyist.create(:name => 'Adam Smith', :city => "San Fransisco, USA")
 
 participant = Rubyist.find(:first)
 puts %{#{participant.name} stays in #{participant.city}}
 
-Rubyist.find(:first).destroy</code></pre>
-            
+Rubyist.find(:first).destroy
+
+
 
 ~~~
