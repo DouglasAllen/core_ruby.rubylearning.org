@@ -794,8 +794,10 @@ m.dispAttr
 m.startEngine
 puts self.class
 puts self
-puts MotorCycle.instance_methods(false).sort</code></pre>
-            <pre><code># p031xdognext.rb
+puts MotorCycle.instance_methods(false).sort
+
+
+# p031xdognext.rb
 require 'p029dog'
 # define class Dog
 class Dog
@@ -810,7 +812,7 @@ d.big_bark
 d.display
 
 
-            <pre><code># p032mystring.rb
+# p032mystring.rb
 class String
   def writesize
     puts self.size
@@ -818,8 +820,9 @@ class String
 end
 size_writer = "Tell me my size!"
 size_writer.writesize
-</code></pre>
-            <pre><code># p033mammal.rb
+
+
+# p033mammal.rb
 class Mammal
   def breathe
     puts "inhale and exhale"
@@ -834,8 +837,10 @@ end
 
 rani = Cat.new
 rani.breathe
-rani.speak</code></pre>
-            <pre><code># p034bird.rb
+rani.speak
+
+
+# p034bird.rb
 class Bird
   def preen
     puts "I am cleaning my feathers."
@@ -853,8 +858,10 @@ end
 
 p = Penguin.new
 p.preen
-p.fly</code></pre>
-            <pre><code># p035inherit.rb
+p.fly
+
+
+# p035inherit.rb
 class GF
   @m =10
   puts @m.object_id
@@ -885,8 +892,9 @@ class S &lt; F
 end
 son = S.new
 son.gfmethod
-</code></pre>
-            <pre><code># p036duck.rb
+
+
+# p036duck.rb
 class Duck
   def quack
     'Quack!'
@@ -926,8 +934,10 @@ def make_it_swim(duck)
   duck.swim
 end
 puts make_it_swim(Duck.new)
-puts make_it_swim(Goose.new)</code></pre>
-            <pre><code># p037rectangle.rb
+puts make_it_swim(Goose.new)
+
+
+# p037rectangle.rb
 # The Rectangle constructor accepts arguments in either
 # of the following forms:
 #   Rectangle.new([x_top, y_left], length, width)
@@ -947,15 +957,17 @@ class Rectangle
   end
 end
 Rectangle.new([10, 23], 4, 10)
-Rectangle.new([10, 23], [14, 13])</code></pre>
-            <pre><code># p037xmtdovride.rb
+Rectangle.new([10, 23], [14, 13])
+
+
+# p037xmtdovride.rb
 class A
   def a
     puts 'In class A'
   end
 end
 
-class B &lt; A
+class B < A
   def a
     puts 'In class B'
   end
@@ -963,8 +975,9 @@ end
 
 b = B.new
 b.a
-</code></pre>
-            <pre><code># p038bicycle.rb
+
+
+# p038bicycle.rb
 class Bicycle
   attr_reader :gears, :wheels, :seats
   def initialize(gears = 1)
@@ -974,7 +987,7 @@ class Bicycle
   end
 end
 
-class Tandem &lt; Bicycle
+class Tandem < Bicycle
   def initialize(gears)
     super
     @seats = 2
@@ -988,8 +1001,10 @@ b = Bicycle.new
 puts b.gears
 puts b.wheels
 puts b.seats
-</code></pre>
-            <pre><code># p038or.rb
+
+
+
+# p038or.rb
 class OR
   def mtd
     puts "First definition of method mtd"
@@ -999,14 +1014,16 @@ class OR
   end
 end
 OR.new.mtd
-</code></pre>
-            <pre><code># p039symbol.rb
+
+
+# p039symbol.rb
 puts "string".object_id
 puts "string".object_id
 puts :symbol.object_id
 puts :symbol.object_id
-</code></pre>
-            <pre><code># p039xsymbol.rb
+
+
+# p039xsymbol.rb
 class Test
   puts :Test.object_id.to_s
   def test
@@ -1017,29 +1034,35 @@ class Test
 end
 t = Test.new
 t.test
-</code></pre>
-            <pre><code># p039xyzsymbol.rb
+
+
+# p039xyzsymbol.rb
 know_ruby = 'yes'
 if know_ruby == 'yes'
   puts 'You are a Rubyist'
 else
   puts 'Start learning Ruby'
 end
-</code></pre>
-            <pre><code># p040myhash.rb
+
+
+# p040myhash.rb
 h = {'dog' =&gt; 'canine', 'cat' =&gt; 'feline', 'donkey' =&gt; 'asinine', 12 =&gt; 'dodecine'}
 puts h.length  # 3
 puts h['dog']   # 'canine'
 puts h
-puts h[12]</code></pre>
-            <pre><code># p041symbolhash.rb
+puts h[12]
+
+
+# p041symbolhash.rb
 people = Hash.new
 people[:nickname] = 'IndianGuru'
 people[:language] = 'Marathi'
 people[:lastname] = 'Talim'
 
-puts people[:lastname] # Talim</code></pre>
-            <pre><code># p042time.rb
+puts people[:lastname] # Talim
+
+
+# p042time.rb
 t = Time.now
 # to get day, month and year with century
 # also hour, minute and second
@@ -1057,14 +1080,16 @@ puts t.strftime("%b")
 
 # 24 hour clock and Time zone name
 puts t.strftime("at %H:%M %Z")
-</code></pre>
-            <pre><code># p043raise.rb
+
+
+# p043raise.rb
 def raise_exception
   puts 'I am before the raise.'
   raise 'An error has occured'
   puts 'I am after the raise'
 end
 raise_exception
+
 </code></pre>
             <pre><code># p044inverse.rb
 def inverse(x)
@@ -1073,6 +1098,7 @@ def inverse(x)
 end
 puts inverse(2)
 puts inverse('not a number')
+
 </code></pre>
             <pre><code># p045handexcp.rb
 def raise_and_rescue
@@ -1086,6 +1112,7 @@ def raise_and_rescue
   puts 'I am after the begin block.'
 end
 raise_and_rescue
+
 </code></pre>
             <pre><code># p046excpvar.rb
 begin
@@ -1093,7 +1120,9 @@ begin
 rescue Exception =&gt; e
   puts e.message
     puts e.backtrace.inspect
-end</code></pre>
+end
+
+</code></pre>
             <pre><code># p046xreadwrite.rb
 # Open and read from a text file
 # Note that since a block is given, file will automatically be closed when the block terminates
@@ -1113,6 +1142,7 @@ rescue Exception =&gt; msg
   # display the system generated error message
   puts msg.message
 end
+
 </code></pre>
             <pre><code># p047classaccess.rb
 class ClassAccess
@@ -1129,6 +1159,7 @@ ca = ClassAccess.new
 ca.m1
 #ca.m2
 #ca.m3
+
 </code></pre>
             <pre><code># p047zclassaccess.rb
 class Person
@@ -1151,7 +1182,9 @@ end
 chris = Person.new(25)
 marcos = Person.new(34)
 puts chris.compare_age(marcos)
-#puts chris.age</code></pre>
+#puts chris.age
+
+</code></pre>
             <pre><code># p048accessor.rb
 # First without accessor methods
 class Song
@@ -1188,6 +1221,7 @@ end
 song = Song.new("Brazil", "Ivete Sangalo")
 puts song.name
 puts song.artist
+
 </code></pre>
             <pre><code># p049instvarinherit.rb
 class C
@@ -1209,6 +1243,7 @@ end
 d = D.new
 d.increase_n
 d.show_n
+
 </code></pre>
             <pre><code># p050newdog.rb
 class NewDog
@@ -1227,6 +1262,7 @@ nd = NewDog.new('Doberman')
 #nd.name=('Benzy')
 nd.name = 'Benzy'
 puts nd.name
+
 </code></pre>
             <pre><code># p050xfreeze.rb
 str = 'A simple string. '
@@ -1236,7 +1272,9 @@ begin
 rescue =&gt; err
   puts "#{err.class} #{err}"
 end
-# The output is - TypeError can't modify frozen string</code></pre>
+# The output is - TypeError can't modify frozen string
+
+</code></pre>
             <pre><code># p051gamecharacters.rb
 class GameCharacter
   def initialize(power, type, weapons)
@@ -1246,6 +1284,7 @@ class GameCharacter
   end
   attr_reader :power, :type, :weapons
 end
+
 </code></pre>
             <pre><code># p052dumpgc.rb
 require 'p051gamecharacters'
@@ -1257,7 +1296,9 @@ end
 
 File.open('game', 'w+') do |f|
   Marshal.dump(gc, f)
-end</code></pre>
+end
+
+</code></pre>
             <pre><code># p053loadgc.rb
 require 'p051gamecharacters'
 File.open('game') do |f|
@@ -1267,16 +1308,22 @@ end
 puts @gc.power.to_s + ' ' + @gc.type + ' '
 @gc.weapons.each do |w|
   puts w + ' '
-end</code></pre>
+end
+
+</code></pre>
             <pre><code># p054constwarn.rb
 A_CONST = 10
-A_CONST = 20</code></pre>
+A_CONST = 20
+
+</code></pre>
             <pre><code># p055constalter.rb
 A_CONST = "Doshi"
 B_CONST = A_CONST
 A_CONST[0] = "J" # alter string referenced by constant
 puts A_CONST # displays Joshi
-puts B_CONST</code></pre>
+puts B_CONST
+
+</code></pre>
             <pre><code># p056const.rb
 OUTER_CONST = 99
 
@@ -1291,6 +1338,7 @@ puts Const.new.get_const
 puts Const::CONST
 puts ::OUTER_CONST
 puts Const::NEW_CONST = 123
+
 </code></pre>
             <pre><code># p057mymethods2.rb
 # variables and methods start lowercase
@@ -1326,6 +1374,7 @@ puts test.inst        # calls getter
 other = TestVar.new(17)
 puts other.inspect
 puts TestVar.cla
+
 </code></pre>
             <pre><code># p058mytrig.rb
 module Trig
@@ -1337,7 +1386,9 @@ module Trig
   def Trig.cos(x)
     # ...
   end
-end</code></pre>
+end
+
+</code></pre>
             <pre><code># p059mymoral.rb
 module Moral
   VERY_BAD = 0
@@ -1345,12 +1396,15 @@ module Moral
   def Moral.sin(badness)
     # ...
   end
-end</code></pre>
+end
+
+</code></pre>
             <pre><code># p060usemodule.rb
 require 'p058mytrig'
 require 'p059mymoral'
 Trig.sin(Trig::PI/4)
 Moral.sin(Moral::VERY_BAD)
+
 </code></pre>
             <pre><code># p061mixins.rb
 module D
@@ -1387,7 +1441,9 @@ end
 ph = Phonograph.new("West End Blues")
 et = EightTrack.new("Real Pillow")
 puts ph.who_am_i?
-puts et.who_am_i?</code></pre>
+puts et.who_am_i?
+
+</code></pre>
             <pre><code>#  p062stuff.rb
 #  A module may contain constants, methods and classes.
 #  No instances
@@ -1408,7 +1464,9 @@ puts Stuff::C     # Stuff namespace
 puts Stuff.m(3)   # like a class method
 x = Stuff::T.new
 # uninitialized constant error, if you try the following
-# puts C</code></pre>
+# puts C
+
+</code></pre>
             <pre><code># p063stuffusage.rb
 require 'p062stuff'     # loads Stuff module from Stuff.rb
                     # $: is a system variable -- contains the path for loads
@@ -1422,7 +1480,9 @@ puts d.p(5)         # method p from Stuff
 puts $:             # array of folders to search for load
 $: &lt;&lt; "c:/"         # add a folder to the load path
 puts $:
-puts Stuff.m(5)     # Stuff class methods not called from D object</code></pre>
+puts Stuff.m(5)     # Stuff class methods not called from D object
+
+</code></pre>
             <pre><code># p063xself1.rb
 class S
   puts 'Just started class S'
@@ -1434,6 +1494,7 @@ class S
   puts 'Back in the outer level of S'
   puts self
 end
+
 </code></pre>
             <pre><code># p063xself2.rb
 class S
@@ -1444,6 +1505,7 @@ class S
 end
 s = S.new
 s.m
+
 </code></pre>
             <pre><code># p063xself3.rb
 obj = Object.new
@@ -1456,6 +1518,7 @@ obj.show
 print 'And inspecting obj from outside, '
 puts "to be sure it's the same object:"
 puts obj
+
 </code></pre>
             <pre><code># p063xself4.rb
 class S
@@ -1465,6 +1528,7 @@ class S
   end
 end
 S.x
+
 </code></pre>
             <pre><code># p064regexp.rb
 string = "My phone number is (123) 555-1234."
@@ -1485,6 +1549,7 @@ end
 puts "Here's another way to get at the first capture:"
 print "Capture #1: "
 puts m[1]
+
 </code></pre>
             <pre><code># p065my_first_test.rb
 require 'test/unit'
@@ -1493,7 +1558,9 @@ class MyFirstTest &lt; Test::Unit::TestCase
   def test_for_truth
     assert true
   end
-end </code></pre>
+end 
+
+</code></pre>
             <pre><code># p066testradius.rb
 require 'test/unit'
 require 'p067radius'
@@ -1521,6 +1588,7 @@ end
     assert_nil(@robj.key)
   end
 end
+
 </code></pre>
             <pre><code># p067radius.rb
 class Radius
@@ -1535,6 +1603,7 @@ class Radius
     end
   end
 end
+
 </code></pre>
             <pre><code># p068dtserver.rb
 # Date Time Server - server side using thread
@@ -1551,6 +1620,7 @@ loop do
     s.close
   end
 end
+
 </code></pre>
             <pre><code># p069dtclient.rb
 require 'socket'
@@ -1560,6 +1630,7 @@ streamSock = TCPSocket.new( "127.0.0.1", 20000 )
 str = streamSock.recv( 100 )
 print str
 streamSock.close
+
 </code></pre>
             <pre><code># p070rubysmtp.rb
 require 'net/smtp'
@@ -1574,6 +1645,7 @@ begin
 rescue Exception =&gt; e
   print "Exception occured: " + e
 end
+
 </code></pre>
             <pre><code># p070thread1.rb
 puts Thread.main
@@ -1599,12 +1671,15 @@ Thread.list.each {|thr| p thr }
 
 # now exit the main thread (killing any others)
 Thread.exit
+
 </code></pre>
             <pre><code># p070thread.rb
 x = Thread.new { sleep 0.1; print "x"; print "y"; print "z" }
 a = Thread.new { print "a"; print "b"; sleep 0.2; print "c" }
 x.join # Let the threads finish before
-a.join # main thread exits...</code></pre>
+a.join # main thread exits...
+
+</code></pre>
             <pre><code># p072soapserver.rb
 require 'logger'
 require 'soap/rpc/standaloneServer'
@@ -1624,17 +1699,20 @@ end
 server = MyServer.new('RubyLearningServer','urn:mySoapServer','localhost',12321)
 trap('INT') {server.shutdown}
 server.start
+
 </code></pre>
             <pre><code># p073prclient.rb
 require 'soap/rpc/driver'
 driver = SOAP::RPC::Driver.new('http://127.0.0.1:12321/', 'urn:mySoapServer')
 driver.add_method('sayhelloto', 'username')
 puts driver.sayhelloto('RubyLearning')
+
 </code></pre>
             <pre><code># p074hellotk.rb
 require 'tk'
 hello = TkRoot.new {title "Hello World"}
 Tk.mainloop
+
 </code></pre>
             <pre><code># p075hellotk1.rb
 require 'tk'
