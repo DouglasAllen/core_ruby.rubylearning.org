@@ -1,8 +1,6 @@
 ~~~ruby
 
-
-
-                <pre><code># p001hello.rb
+# p001hello.rb
 =begin
   Ruby is an interpreted language
   Source file has .rb extension
@@ -12,9 +10,9 @@
   String literals in single or double quotes
 =end
 puts 'Hello'
-</code></pre>
 
-            <pre><code># p002rubynumbers.rb
+
+# p002rubynumbers.rb
 =begin
  Ruby Numbers
  Usual operators:
@@ -33,9 +31,9 @@ puts 10 - 11
 puts 1.5 / 2.6
 # class hierarchy
 # http://www.cs.mun.ca/~donald/slug/2003-10-16/presentation/img5.html
-</code></pre>
 
-            <pre><code># p003rubystrings.rb
+
+# p003rubystrings.rb
 =begin
   Ruby Strings
   In Ruby, strings are mutable
@@ -55,9 +53,9 @@ puts 'Hello' * 3
 # http://rubylearning.com/satishtalim/ruby_names.html
 PI = 3.1416
 puts PI
-</code></pre>
 
-            <pre><code># p004stringusage.rb
+
+# p004stringusage.rb
 # Defining a constant
 PI = 3.1416
 puts PI
@@ -88,9 +86,9 @@ a = &lt;&lt;END_STR
 This is the string
 And a second line
 END_STR
-puts a</code></pre>
+puts a
 
-            <pre><code># p005methods.rb
+# p005methods.rb
 # gets and chomp
 puts "In which city do you stay?"
 # STDOUT - global constant - the actual standard output stream for the program
@@ -103,17 +101,17 @@ puts "The city is " + city
 
 # to know which object you are in
 puts self
-</code></pre>
 
-            <pre><code># p006ftoc.rb
+
+# p006ftoc.rb
 puts 'Enter temperature in Fahrenheit: '
 STDOUT.flush
 temp_in_fahrenheit = gets.chomp
 temp_in_celsius = (((temp_in_fahrenheit.to_f - 32.0) / 9.0) * 5.0)
 puts 'Temperature ' + temp_in_fahrenheit + ' degree Fahrenheit = ' + format("%.2f", temp_in_celsius) + ' degree Celsius'
-</code></pre>
 
-            <pre><code># p007dt.rb
+
+# p007dt.rb
 =begin
   The first character of a name helps Ruby to distinguish its intended use
   instance variable name starts with a @ sign
@@ -133,9 +131,9 @@ x = "house"  # string
 x = 7.5        # real
 
 # In Ruby, everything you manipulate is an object
-'I love Ruby'.length</code></pre>
+'I love Ruby'.length
 
-            <pre><code># p008mymethods.rb
+# p008mymethods.rb
 # A method returns the value of the last statement
 # Methods that act as queries are often named with a trailing ?
 # Methods that are "dangerous," or modify the receiver, might be named with a trailing ! (Bang methods)
@@ -157,9 +155,9 @@ def hello2 name2
    'Hello ' + name2
 end
 puts(hello2 'talim')
-</code></pre>
 
-            <pre><code># p009mymethods1.rb
+
+# p009mymethods1.rb
 # interpolation refers to the process of inserting the result of an
 # expression into a string literal
 # the interpolation operator #{...} gets calculated separately
@@ -167,8 +165,10 @@ def mtd(arg1="Dibya", arg2="Shashank", arg3="Shashank")
   "#{arg1}, #{arg2}, #{arg3}."
 end
 puts mtd
-puts mtd("ruby")</code></pre>
-            <pre><code># p010aliasmtd.rb
+puts mtd("ruby")
+
+
+# p010aliasmtd.rb
 # alias new_name old_name
 # When a method is aliased, the new name refers
 # to a copy of the original method's body
@@ -182,8 +182,9 @@ def oldmtd
 end
 puts oldmtd
 puts newmtd
-</code></pre>
-            <pre><code># p011vararg.rb
+
+
+# p011vararg.rb
 # variable number of parameters example
 # The asterisk is actually taking all arguments you send to the method
 # and assigning them to an array named my_string as shown below
@@ -191,22 +192,27 @@ def foo(*my_string)
   my_string.inspect
 end
 puts foo('hello','world')
-puts foo()</code></pre>
-            <pre><code># p012mtdstack.rb
+puts foo()
+
+
+# p012mtdstack.rb
 # Sequence in which the parameters are put on to the stack is left to right
 def mtd(a=99, b=a+1)
   [a,b]
 end
-puts mtd</code></pre>
-            <pre><code># p012zmm.rb
+puts mtd
+
+
+# p012zmm.rb
 class Dummy
   def method_missing(m, *args)
     puts "There's no method called #{m} here -- please try again."
   end
 end
 Dummy.new.anything
-</code></pre>
-            <pre><code># p013expint.rb
+
+
+# p013expint.rb
 def say_goodnight(name)
   result = "Good night, #{name}"
   return result
@@ -219,8 +225,8 @@ def say_goodnight2(name)
 end
 puts say_goodnight2('Talim')
 
-</code></pre>
-            <pre><code># p013strcmp.rb
+
+# p013strcmp.rb
 # String#eql?, tests two strings for identical content. It returns the same result as ==
 # String#equal?, tests whether two strings are the same object
 s1 = 'Jonathan'
@@ -246,8 +252,9 @@ if s1.equal?(s3)
 else
   puts 'Two Strings are not identical objects'
 end
-</code></pre>
-            <pre><code># p014constructs.rb
+
+
+# p014constructs.rb
 # In Ruby, nil and false evaluate to false, everything else (including true, 0) means true
 # nil is an actual object
 # if else end
@@ -270,8 +277,10 @@ var = 0
 while var &lt; 10
   puts var.to_s
   var += 1
-end</code></pre>
-            <pre><code># p015elsifex.rb
+end
+
+
+# p015elsifex.rb
 # elseif example
 
 # Original example
@@ -310,8 +319,9 @@ puts 'Hello, ' + name + '.'
 if name == 'Satish' || name == 'Sunil'
   puts 'What a nice name!!'
 end
-</code></pre>
-            <pre><code># p016leapyear.rb
+
+
+# p016leapyear.rb
 =begin
 Program to determine if a year is a leap year.
 
@@ -334,8 +344,9 @@ if ((input_year % 4 == 0) &amp;&amp; (input_year % 100 &gt; 0)) || (input_year %
 else
   puts "Year #{input_year} is not a leap year"
 end
-</code></pre>
-            <pre><code># p017leapyearmtd.rb
+
+
+# p017leapyearmtd.rb
 def leap_year?(input_year)
   ((input_year % 4 == 0)  &amp;&amp; (input_year % 100 &gt; 0)) || (input_year % 400 == 0)
 end
@@ -348,8 +359,10 @@ if leap_year?(input_year)
   puts "Year #{input_year} is a leap year and has #{366*60*24} minutes in the year"
 else
   puts "Year #{input_year} is not a leap year and has #{365*60*24} minutes in the year"
-end</code></pre>
-            <pre><code># p018arrays.rb
+end
+
+
+# p018arrays.rb
 # Arrays
 
 # Empty array
@@ -413,8 +426,10 @@ languages.delete('Mumbai')
 languages.each do |lang|
   puts 'I love ' + lang + '!'
   puts 'Don\'t you?'
-end</code></pre>
-            <pre><code># p019mtdarry.rb
+end
+
+
+# p019mtdarry.rb
 # if you give return multiple parameters,
 # the method returns them in an array
 # The times method of the Integer class iterates block num times,
@@ -431,8 +446,10 @@ end
 num, square = mtdarry
 puts num
 puts square
-</code></pre>
-            <pre><code># p020arraysum.rb
+
+
+
+# p020arraysum.rb
 # Write a Ruby program that, when given an array
 # as collection = [1, 2, 3, 4, 5] it calculates the sum of its elements
 collection = [1, 2, 3, 4, 5]
