@@ -466,8 +466,10 @@ collection.each do |i|
   else
     puts "#{i} is odd"
   end
-end</code></pre>
-            <pre><code># p021ranges.rb
+end
+
+
+# p021ranges.rb
 =begin
   Sequences have a start point, an end point, and a way to produce successive values in the sequence
   In Ruby, sequences are created using the ". ." and ". . ." range operators.
@@ -486,8 +488,9 @@ i = s.index('=')
 # If range supplied to a string, as below, a new String is created
 puts s[0...i]
 puts s[i+1,s.length]
-</code></pre>
-            <pre><code># p022codeblock.rb
+
+
+# p022codeblock.rb
 =begin
   Ruby Code blocks are chunks of code between braces or
   between do- end that you can associate with method invocations
@@ -501,16 +504,19 @@ def call_block
 end
 # Code blocks may appear only in the source adjacent to a method call
 call_block {puts 'In the block'}
-</code></pre>
-            <pre><code># p023codeblock2.rb
+
+
+# p023codeblock2.rb
 # You can provide parameters to the call to yield:
 # these will be passed to the block
 def call_block
   yield('hello', 99)
 end
 call_block {|str, num| puts str + ' ' + num.to_s}
-</code></pre>
-            <pre><code># p024proccall.rb
+
+
+
+# p024proccall.rb
 # Blocks are not objects
 # they can be converted into objects of class Proc by calling lambda method
 prc = lambda {puts 'Hello'}
@@ -522,8 +528,9 @@ toast = lambda do
   puts 'Cheers'
 end
 toast.call
-</code></pre>
-            <pre><code># p025mtdproc.rb
+
+
+# p025mtdproc.rb
 =begin
   You cannot pass methods into other methods (but you can pass procs into methods),
   and methods cannot return other methods (but they can return procs)
@@ -539,8 +546,10 @@ say = lambda do
   puts 'Hello'
 end
 
-some_mtd say</code></pre>
-            <pre><code># p026phrase.rb
+some_mtd say
+
+
+# p026phrase.rb
 =begin
   If you call rand, you'll get a float greater than or equal to 0.0
   and less than 1.0. If you give it an integer parameter (by calling rand(5) ),
@@ -568,8 +577,9 @@ rand3 = rand(three_len)
 phrase = word_list_one[rand1] + " " + word_list_two[rand2] + " " + word_list_three[rand3]
 
 puts phrase
-</code></pre>
-            <pre><code># p026zdeafgm1.rb
+
+
+# p026zdeafgm1.rb
 =begin
   Write a Deaf Grandma program. Whatever you say to grandma
   (whatever you type in), she should respond with HUH?!  SPEAK UP, SONNY!,
@@ -590,8 +600,10 @@ until (response = gets.chomp).eql?('BYE')
   end
   puts 'Enter your response: '
   STDOUT.flush
-end</code></pre>
-            <pre><code># p026zdeafgm2.rb
+end
+
+
+# p026zdeafgm2.rb
 =begin
   Extend your Deaf Grandma program: What if grandma doesn't want you to leave?
   When you shout BYE, she could pretend not to hear you. Change your previous
@@ -612,8 +624,10 @@ until (response = gets.chomp).eql?('BYE BYE BYE')
   end
   puts 'Enter your response: '
   STDOUT.flush
-end</code></pre>
-            <pre><code># p027readwrite.rb
+end
+
+
+# p027readwrite.rb
 # Open and read from a text file
 # Note that since a block is given, file will automatically be closed when the block terminates
 File.open('p014constructs.rb', 'r') do |f1|
@@ -626,8 +640,10 @@ end
 File.open('test.rb', 'w') do |f2|
   # use "" for two lines of text
   f2.puts "Created by Satish\nThank God!"
-end</code></pre>
-            <pre><code># p028swapcontents.rb - Program to swap the contents of 2 text files
+end
+
+
+# p028swapcontents.rb - Program to swap the contents of 2 text files
 # Asuumptions: The two files exist in the same folder as the program
 
 # Function to read contents of one file and write them to another file
@@ -647,8 +663,10 @@ filereadwrite("file1", "file1.tmp")
 filereadwrite("file2", "file1")
 filereadwrite("file1.tmp", "file2")
 
-File.delete('file1.tmp')</code></pre>
-            <pre><code># p028xrandom.rb
+File.delete('file1.tmp')
+
+
+# p028xrandom.rb
 # We now need to display the contents of the file from the word USA
 f = File.new("hellousa.rb")
 
@@ -741,8 +759,9 @@ d1 = nil
   it's all marked. If you stuff something in a constant or global variable,
   it's forever marked.
 =end
-</code></pre>
-            <pre><code># p030motorcycle.rb
+
+
+# p030motorcycle.rb
 class MotorCycle
   def initialize(make, color)
     # Instance variables
@@ -758,8 +777,9 @@ class MotorCycle
     end
   end
 end
-</code></pre>
-            <pre><code># p031motorcycletest.rb
+
+
+# p031motorcycletest.rb
 require_relative 'p030motorcycle'
 m = MotorCycle.new('Yamaha', 'red')
 m.startEngine
@@ -788,7 +808,8 @@ d = Dog.new('Labrador', 'Benzy')
 d.bark
 d.big_bark
 d.display
-</code></pre>
+
+
             <pre><code># p032mystring.rb
 class String
   def writesize
